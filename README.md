@@ -1,6 +1,7 @@
 # WhoKnowsBetter
 
 INFO: THIS IS THE PUBLIC VERSION OF WHOKNOWSBETTER.  
+
 IN ORDER TO GET THE APP WORKING. YOU NEED MY GoogleService-Info.plist FILE. IT CAN BE GIVEN ON REQUEST!
 
 * WKB now can take questions and create a quiz from push notifications.
