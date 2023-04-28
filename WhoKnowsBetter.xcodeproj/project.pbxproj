@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0281B529AFCCC900F54757 /* WhoKnowsBetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281B429AFCCC900F54757 /* WhoKnowsBetterApp.swift */; };
+		CE0281B729AFCCC900F54757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281B629AFCCC900F54757 /* ContentView.swift */; };
+		CE0281B929AFCCCB00F54757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0281B829AFCCCB00F54757 /* Assets.xcassets */; };
+		CE0281BC29AFCCCB00F54757 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0281BB29AFCCCB00F54757 /* Preview Assets.xcassets */; };
+		CE0281C629AFCCCB00F54757 /* WhoKnowsBetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281C529AFCCCB00F54757 /* WhoKnowsBetterTests.swift */; };
+		CE0281D029AFCCCB00F54757 /* WhoKnowsBetterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281CF29AFCCCB00F54757 /* WhoKnowsBetterUITests.swift */; };
+		CE0281D229AFCCCB00F54757 /* WhoKnowsBetterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281D129AFCCCB00F54757 /* WhoKnowsBetterUITestsLaunchTests.swift */; };
+		CE0281DF29AFCCEF00F54757 /* ServiceCallComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0281DE29AFCCEF00F54757 /* ServiceCallComponent.swift */; };
+		CE122C7429C476C500913591 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE122C7329C476C500913591 /* ViewModel.swift */; };
+		CE122C7629C8593600913591 /* DashBoardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE122C7529C8593600913591 /* DashBoardPage.swift */; };
+		CE122C7929CA2B4500913591 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE122C7829CA2B4500913591 /* TabBar.swift */; };
+		CE122C7C29CB37CC00913591 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE122C7B29CB37CC00913591 /* SearchBar.swift */; };
+		CE122C7E29CB3B1F00913591 /* TapableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE122C7D29CB3B1F00913591 /* TapableList.swift */; };
+		CE1718E429E683BC001AAEC1 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1718E329E683BC001AAEC1 /* SideMenu.swift */; };
+		CE1718E629E68660001AAEC1 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1718E529E68660001AAEC1 /* SideMenuView.swift */; };
+		CE1718E829E68737001AAEC1 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1718E729E68737001AAEC1 /* ProfilePage.swift */; };
+		CE1718EA29E6897E001AAEC1 /* FriendshipPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1718E929E6897E001AAEC1 /* FriendshipPage.swift */; };
+		CE23452529F69DC1009CEFA3 /* QuestionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452429F69DC1009CEFA3 /* QuestionComponent.swift */; };
+		CE23452729F6A27B009CEFA3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452629F6A27B009CEFA3 /* Question.swift */; };
+		CE23452929F6C0EB009CEFA3 /* QuizViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452829F6C0EB009CEFA3 /* QuizViewPage.swift */; };
+		CE23452D29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452C29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift */; };
+		CE23452F29FBF551009CEFA3 /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452E29FBF551009CEFA3 /* AppFlowView.swift */; };
+		CE23453329FC06A5009CEFA3 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23453229FC06A5009CEFA3 /* Quiz.swift */; };
+		CE2AA66329B8CE8200815793 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A630829B1FED40098CD5C /* SignUpPage.swift */; };
+		CE2AA66529B8D0EA00815793 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2AA66429B8D0EA00815793 /* Player.swift */; };
+		CE43934129EF45E5009DAF8F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CE43934029EF45E5009DAF8F /* FirebaseMessaging */; };
+		CE43934629F01984009DAF8F /* IncomingRequestsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43934529F01984009DAF8F /* IncomingRequestsPage.swift */; };
+		CE43934A29F52897009DAF8F /* FriendListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43934929F52897009DAF8F /* FriendListPage.swift */; };
+		CE6A62F929B12AB10098CD5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A62F829B12AB00098CD5C /* GoogleService-Info.plist */; };
+		CE6A62FA29B12AB10098CD5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A62F829B12AB00098CD5C /* GoogleService-Info.plist */; };
+		CE6A62FB29B12AB10098CD5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6A62F829B12AB00098CD5C /* GoogleService-Info.plist */; };
+		CE6A62FE29B12C600098CD5C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE6A62FD29B12C600098CD5C /* FirebaseAuth */; };
+		CE6A630029B12C600098CD5C /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6A62FF29B12C600098CD5C /* FirebaseDatabaseSwift */; };
+		CE6A630329B13B7F0098CD5C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE6A630229B13B7F0098CD5C /* FirebaseFirestore */; };
+		CE6A630529B1FD980098CD5C /* PopoverComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A630429B1FD980098CD5C /* PopoverComponent.swift */; };
+		CE6A631129B22FAA0098CD5C /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A631029B22FAA0098CD5C /* SignInPage.swift */; };
+		CE75D24129E99F760004E649 /* QuestionHistoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75D24029E99F760004E649 /* QuestionHistoryPage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE0281C229AFCCCB00F54757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0281A929AFCCC800F54757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0281B029AFCCC900F54757;
+			remoteInfo = WhoKnowsBetter;
+		};
+		CE0281CC29AFCCCB00F54757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0281A929AFCCC800F54757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0281B029AFCCC900F54757;
+			remoteInfo = WhoKnowsBetter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE0281B129AFCCC900F54757 /* WhoKnowsBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoKnowsBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0281B429AFCCC900F54757 /* WhoKnowsBetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoKnowsBetterApp.swift; sourceTree = "<group>"; };
+		CE0281B629AFCCC900F54757 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE0281B829AFCCCB00F54757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE0281BB29AFCCCB00F54757 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE0281C129AFCCCB00F54757 /* WhoKnowsBetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoKnowsBetterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0281C529AFCCCB00F54757 /* WhoKnowsBetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoKnowsBetterTests.swift; sourceTree = "<group>"; };
+		CE0281CB29AFCCCB00F54757 /* WhoKnowsBetterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoKnowsBetterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0281CF29AFCCCB00F54757 /* WhoKnowsBetterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoKnowsBetterUITests.swift; sourceTree = "<group>"; };
+		CE0281D129AFCCCB00F54757 /* WhoKnowsBetterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoKnowsBetterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE0281DE29AFCCEF00F54757 /* ServiceCallComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCallComponent.swift; sourceTree = "<group>"; };
+		CE122C7329C476C500913591 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CE122C7529C8593600913591 /* DashBoardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardPage.swift; sourceTree = "<group>"; };
+		CE122C7829CA2B4500913591 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		CE122C7B29CB37CC00913591 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CE122C7D29CB3B1F00913591 /* TapableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapableList.swift; sourceTree = "<group>"; };
+		CE1718E329E683BC001AAEC1 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		CE1718E529E68660001AAEC1 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		CE1718E729E68737001AAEC1 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		CE1718E929E6897E001AAEC1 /* FriendshipPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendshipPage.swift; sourceTree = "<group>"; };
+		CE23452429F69DC1009CEFA3 /* QuestionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionComponent.swift; sourceTree = "<group>"; };
+		CE23452629F6A27B009CEFA3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CE23452829F6C0EB009CEFA3 /* QuizViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewPage.swift; sourceTree = "<group>"; };
+		CE23452C29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBooleanDelegateSwitch.swift; sourceTree = "<group>"; };
+		CE23452E29FBF551009CEFA3 /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
+		CE23453229FC06A5009CEFA3 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		CE2AA66429B8D0EA00815793 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CE43933F29EEFCFB009DAF8F /* WhoKnowsBetter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhoKnowsBetter.entitlements; sourceTree = "<group>"; };
+		CE43934229EF4B26009DAF8F /* WhoKnowsBetterRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = WhoKnowsBetterRelease.entitlements; sourceTree = "<group>"; };
+		CE43934529F01984009DAF8F /* IncomingRequestsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingRequestsPage.swift; sourceTree = "<group>"; };
+		CE43934929F52897009DAF8F /* FriendListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPage.swift; sourceTree = "<group>"; };
+		CE6A62F829B12AB00098CD5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE6A630429B1FD980098CD5C /* PopoverComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverComponent.swift; sourceTree = "<group>"; };
+		CE6A630829B1FED40098CD5C /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpPage.swift; path = WhoKnowsBetter/Pages/SignUpPage.swift; sourceTree = SOURCE_ROOT; };
+		CE6A631029B22FAA0098CD5C /* SignInPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		CE75D24029E99F760004E649 /* QuestionHistoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistoryPage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE0281AE29AFCCC900F54757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6A630029B12C600098CD5C /* FirebaseDatabaseSwift in Frameworks */,
+				CE43934129EF45E5009DAF8F /* FirebaseMessaging in Frameworks */,
+				CE6A62FE29B12C600098CD5C /* FirebaseAuth in Frameworks */,
+				CE6A630329B13B7F0098CD5C /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281BE29AFCCCB00F54757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281C829AFCCCB00F54757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE0281A829AFCCC800F54757 = {
+			isa = PBXGroup;
+			children = (
+				CE0281B329AFCCC900F54757 /* WhoKnowsBetter */,
+				CE0281C429AFCCCB00F54757 /* WhoKnowsBetterTests */,
+				CE0281CE29AFCCCB00F54757 /* WhoKnowsBetterUITests */,
+				CE0281B229AFCCC900F54757 /* Products */,
+				CE6A630129B13B7F0098CD5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE0281B229AFCCC900F54757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE0281B129AFCCC900F54757 /* WhoKnowsBetter.app */,
+				CE0281C129AFCCCB00F54757 /* WhoKnowsBetterTests.xctest */,
+				CE0281CB29AFCCCB00F54757 /* WhoKnowsBetterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE0281B329AFCCC900F54757 /* WhoKnowsBetter */ = {
+			isa = PBXGroup;
+			children = (
+				CE43933F29EEFCFB009DAF8F /* WhoKnowsBetter.entitlements */,
+				CE43934229EF4B26009DAF8F /* WhoKnowsBetterRelease.entitlements */,
+				CE0281B629AFCCC900F54757 /* ContentView.swift */,
+				CE2AA66129B8CBB600815793 /* Components */,
+				CE2AA66029B8CB6800815793 /* Pages */,
+				CE6A62F829B12AB00098CD5C /* GoogleService-Info.plist */,
+				CE0281B429AFCCC900F54757 /* WhoKnowsBetterApp.swift */,
+				CE0281B829AFCCCB00F54757 /* Assets.xcassets */,
+				CE0281BA29AFCCCB00F54757 /* Preview Content */,
+			);
+			path = WhoKnowsBetter;
+			sourceTree = "<group>";
+		};
+		CE0281BA29AFCCCB00F54757 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE0281BB29AFCCCB00F54757 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE0281C429AFCCCB00F54757 /* WhoKnowsBetterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0281C529AFCCCB00F54757 /* WhoKnowsBetterTests.swift */,
+			);
+			path = WhoKnowsBetterTests;
+			sourceTree = "<group>";
+		};
+		CE0281CE29AFCCCB00F54757 /* WhoKnowsBetterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0281CF29AFCCCB00F54757 /* WhoKnowsBetterUITests.swift */,
+				CE0281D129AFCCCB00F54757 /* WhoKnowsBetterUITestsLaunchTests.swift */,
+			);
+			path = WhoKnowsBetterUITests;
+			sourceTree = "<group>";
+		};
+		CE122C7A29CB37A000913591 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CE122C7B29CB37CC00913591 /* SearchBar.swift */,
+				CE122C7D29CB3B1F00913591 /* TapableList.swift */,
+				CE1718E329E683BC001AAEC1 /* SideMenu.swift */,
+				CE1718E529E68660001AAEC1 /* SideMenuView.swift */,
+				CE23452429F69DC1009CEFA3 /* QuestionComponent.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		CE2AA66029B8CB6800815793 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A630829B1FED40098CD5C /* SignUpPage.swift */,
+				CE6A631029B22FAA0098CD5C /* SignInPage.swift */,
+				CE122C7529C8593600913591 /* DashBoardPage.swift */,
+				CE1718E729E68737001AAEC1 /* ProfilePage.swift */,
+				CE1718E929E6897E001AAEC1 /* FriendshipPage.swift */,
+				CE75D24029E99F760004E649 /* QuestionHistoryPage.swift */,
+				CE43934529F01984009DAF8F /* IncomingRequestsPage.swift */,
+				CE43934929F52897009DAF8F /* FriendListPage.swift */,
+				CE23452829F6C0EB009CEFA3 /* QuizViewPage.swift */,
+				CE23452E29FBF551009CEFA3 /* AppFlowView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		CE2AA66129B8CBB600815793 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE122C7A29CB37A000913591 /* UIComponents */,
+				CE6A630429B1FD980098CD5C /* PopoverComponent.swift */,
+				CE0281DE29AFCCEF00F54757 /* ServiceCallComponent.swift */,
+				CE2AA66429B8D0EA00815793 /* Player.swift */,
+				CE122C7329C476C500913591 /* ViewModel.swift */,
+				CE122C7829CA2B4500913591 /* TabBar.swift */,
+				CE23452629F6A27B009CEFA3 /* Question.swift */,
+				CE23452C29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift */,
+				CE23453229FC06A5009CEFA3 /* Quiz.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CE6A630129B13B7F0098CD5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE0281B029AFCCC900F54757 /* WhoKnowsBetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0281D529AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetter" */;
+			buildPhases = (
+				CE0281AD29AFCCC900F54757 /* Sources */,
+				CE0281AE29AFCCC900F54757 /* Frameworks */,
+				CE0281AF29AFCCC900F54757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhoKnowsBetter;
+			packageProductDependencies = (
+				CE6A62FD29B12C600098CD5C /* FirebaseAuth */,
+				CE6A62FF29B12C600098CD5C /* FirebaseDatabaseSwift */,
+				CE6A630229B13B7F0098CD5C /* FirebaseFirestore */,
+				CE43934029EF45E5009DAF8F /* FirebaseMessaging */,
+			);
+			productName = WhoKnowsBetter;
+			productReference = CE0281B129AFCCC900F54757 /* WhoKnowsBetter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE0281C029AFCCCB00F54757 /* WhoKnowsBetterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0281D829AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetterTests" */;
+			buildPhases = (
+				CE0281BD29AFCCCB00F54757 /* Sources */,
+				CE0281BE29AFCCCB00F54757 /* Frameworks */,
+				CE0281BF29AFCCCB00F54757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0281C329AFCCCB00F54757 /* PBXTargetDependency */,
+			);
+			name = WhoKnowsBetterTests;
+			productName = WhoKnowsBetterTests;
+			productReference = CE0281C129AFCCCB00F54757 /* WhoKnowsBetterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE0281CA29AFCCCB00F54757 /* WhoKnowsBetterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0281DB29AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetterUITests" */;
+			buildPhases = (
+				CE0281C729AFCCCB00F54757 /* Sources */,
+				CE0281C829AFCCCB00F54757 /* Frameworks */,
+				CE0281C929AFCCCB00F54757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0281CD29AFCCCB00F54757 /* PBXTargetDependency */,
+			);
+			name = WhoKnowsBetterUITests;
+			productName = WhoKnowsBetterUITests;
+			productReference = CE0281CB29AFCCCB00F54757 /* WhoKnowsBetterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE0281A929AFCCC800F54757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE0281B029AFCCC900F54757 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE0281C029AFCCCB00F54757 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CE0281B029AFCCC900F54757;
+					};
+					CE0281CA29AFCCCB00F54757 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CE0281B029AFCCC900F54757;
+					};
+				};
+			};
+			buildConfigurationList = CE0281AC29AFCCC800F54757 /* Build configuration list for PBXProject "WhoKnowsBetter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE0281A829AFCCC800F54757;
+			packageReferences = (
+				CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = CE0281B229AFCCC900F54757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE0281B029AFCCC900F54757 /* WhoKnowsBetter */,
+				CE0281C029AFCCCB00F54757 /* WhoKnowsBetterTests */,
+				CE0281CA29AFCCCB00F54757 /* WhoKnowsBetterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE0281AF29AFCCC900F54757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0281BC29AFCCCB00F54757 /* Preview Assets.xcassets in Resources */,
+				CE0281B929AFCCCB00F54757 /* Assets.xcassets in Resources */,
+				CE6A62F929B12AB10098CD5C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281BF29AFCCCB00F54757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6A62FA29B12AB10098CD5C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281C929AFCCCB00F54757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6A62FB29B12AB10098CD5C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE0281AD29AFCCC900F54757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE43934629F01984009DAF8F /* IncomingRequestsPage.swift in Sources */,
+				CE2AA66329B8CE8200815793 /* SignUpPage.swift in Sources */,
+				CE23452D29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift in Sources */,
+				CE43934A29F52897009DAF8F /* FriendListPage.swift in Sources */,
+				CE122C7E29CB3B1F00913591 /* TapableList.swift in Sources */,
+				CE0281DF29AFCCEF00F54757 /* ServiceCallComponent.swift in Sources */,
+				CE6A631129B22FAA0098CD5C /* SignInPage.swift in Sources */,
+				CE75D24129E99F760004E649 /* QuestionHistoryPage.swift in Sources */,
+				CE122C7629C8593600913591 /* DashBoardPage.swift in Sources */,
+				CE0281B729AFCCC900F54757 /* ContentView.swift in Sources */,
+				CE2AA66529B8D0EA00815793 /* Player.swift in Sources */,
+				CE23453329FC06A5009CEFA3 /* Quiz.swift in Sources */,
+				CE0281B529AFCCC900F54757 /* WhoKnowsBetterApp.swift in Sources */,
+				CE1718EA29E6897E001AAEC1 /* FriendshipPage.swift in Sources */,
+				CE23452729F6A27B009CEFA3 /* Question.swift in Sources */,
+				CE1718E629E68660001AAEC1 /* SideMenuView.swift in Sources */,
+				CE23452929F6C0EB009CEFA3 /* QuizViewPage.swift in Sources */,
+				CE23452F29FBF551009CEFA3 /* AppFlowView.swift in Sources */,
+				CE23452529F69DC1009CEFA3 /* QuestionComponent.swift in Sources */,
+				CE1718E429E683BC001AAEC1 /* SideMenu.swift in Sources */,
+				CE122C7429C476C500913591 /* ViewModel.swift in Sources */,
+				CE6A630529B1FD980098CD5C /* PopoverComponent.swift in Sources */,
+				CE1718E829E68737001AAEC1 /* ProfilePage.swift in Sources */,
+				CE122C7C29CB37CC00913591 /* SearchBar.swift in Sources */,
+				CE122C7929CA2B4500913591 /* TabBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281BD29AFCCCB00F54757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0281C629AFCCCB00F54757 /* WhoKnowsBetterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0281C729AFCCCB00F54757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0281D229AFCCCB00F54757 /* WhoKnowsBetterUITestsLaunchTests.swift in Sources */,
+				CE0281D029AFCCCB00F54757 /* WhoKnowsBetterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE0281C329AFCCCB00F54757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0281B029AFCCC900F54757 /* WhoKnowsBetter */;
+			targetProxy = CE0281C229AFCCCB00F54757 /* PBXContainerItemProxy */;
+		};
+		CE0281CD29AFCCCB00F54757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0281B029AFCCC900F54757 /* WhoKnowsBetter */;
+			targetProxy = CE0281CC29AFCCCB00F54757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE0281D329AFCCCB00F54757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE0281D429AFCCCB00F54757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE0281D629AFCCCB00F54757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhoKnowsBetter/WhoKnowsBetter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhoKnowsBetter/Preview Content\"";
+				DEVELOPMENT_TEAM = Q55FUPDXJ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhoKnowsBetter/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE0281D729AFCCCB00F54757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WhoKnowsBetter/WhoKnowsBetterRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhoKnowsBetter/Preview Content\"";
+				DEVELOPMENT_TEAM = Q55FUPDXJ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhoKnowsBetter/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE0281D929AFCCCB00F54757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q55FUPDXJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhoKnowsBetter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhoKnowsBetter";
+			};
+			name = Debug;
+		};
+		CE0281DA29AFCCCB00F54757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhoKnowsBetter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WhoKnowsBetter";
+			};
+			name = Release;
+		};
+		CE0281DC29AFCCCB00F54757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q55FUPDXJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhoKnowsBetter;
+			};
+			name = Debug;
+		};
+		CE0281DD29AFCCCB00F54757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grncm.WhoKnowsBetterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhoKnowsBetter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE0281AC29AFCCC800F54757 /* Build configuration list for PBXProject "WhoKnowsBetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0281D329AFCCCB00F54757 /* Debug */,
+				CE0281D429AFCCCB00F54757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0281D529AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0281D629AFCCCB00F54757 /* Debug */,
+				CE0281D729AFCCCB00F54757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0281D829AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0281D929AFCCCB00F54757 /* Debug */,
+				CE0281DA29AFCCCB00F54757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0281DB29AFCCCB00F54757 /* Build configuration list for PBXNativeTarget "WhoKnowsBetterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0281DC29AFCCCB00F54757 /* Debug */,
+				CE0281DD29AFCCCB00F54757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE43934029EF45E5009DAF8F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		CE6A62FD29B12C600098CD5C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CE6A62FF29B12C600098CD5C /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		CE6A630229B13B7F0098CD5C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE0281A929AFCCC800F54757 /* Project object */;
+}
