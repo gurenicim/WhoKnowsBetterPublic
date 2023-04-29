@@ -14,6 +14,6 @@ TODO
 1. History Page
 2. LeaderBoard
 3. Advanced search Query
-4.LeaderBoards and stats will be reset by a batch program weekly  
+4. LeaderBoards and stats will be reset by a batch program weekly  
 
 Enjoy...
