@@ -10,7 +10,7 @@ import SwiftUI
 struct TapableList: View {
     @State private var selectedIndex: String?
     @Binding var userList: Array<String>
-    @EnvironmentObject var selfPlayer: Player
+    @EnvironmentObject var player: Player
     @Binding var buttonText: String
     var body: some View {
         VStack {
@@ -19,12 +19,12 @@ struct TapableList: View {
                     HStack {
                         Text("\(usr)")
                         Spacer()
-                        Text(buttonText).foregroundColor(.blue)
+                        Text((player.friendList.contains(usr) || player.outgoingFriendRequests.contains(usr)) ? "Added": "Add").foregroundColor(.blue)
                     }.contentShape(Rectangle()).onTapGesture {
                         selectedIndex = usr
-                        selfPlayer.sendFriendRequestTo(friendUsername: "\(usr)")
+                        player.sendFriendRequestTo(friendUsername: "\(usr)")
                         buttonText = "Added"
-                    }
+                    }.disabled(buttonText=="Added")
                 }.listRowBackground(Color.yellow)
             }.scrollContentBackground(.hidden)
         }

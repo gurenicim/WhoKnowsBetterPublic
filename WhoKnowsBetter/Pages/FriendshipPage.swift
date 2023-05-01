@@ -142,7 +142,7 @@ struct FriendshipPage: View {
             }
             TapableList(userList: $userList, buttonText: $buttonText).onTapGesture {
                 isFocused = false
-            }
+            }.environmentObject(player)
         }.onAppear {
             friendCount = player.friendList.count
             incomingCount = player.incomingFriendRequests.count

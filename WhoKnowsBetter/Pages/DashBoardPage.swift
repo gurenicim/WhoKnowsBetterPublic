@@ -25,32 +25,6 @@ struct DashBoardPage: View {
     let db = Firestore.firestore()
     let defaults = UserDefaults.standard
     
-    func fetchUserData() {
-        Auth.auth().currentUser?.getIDTokenResult(forcingRefresh: true) {
-            (authResult, err) in
-            if let err = err {
-                print("Error: \(err)")
-                try? Auth.auth().signOut()
-            } else if (authResult == nil) {
-                try? Auth.auth().signOut()
-            }
-        }
-        let email = Auth.auth().currentUser?.email
-        db.collection("players").whereField("email", isEqualTo: email!)
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let defaults = UserDefaults.standard
-                        let username = document.data()["username"] as! String
-                        defaults.set(document.data(), forKey: "userProfile")
-                        defaults.set(username, forKey: "username")
-                    }
-                }
-            }
-    }
-    
     func searchForFriend(username: String){
         
         let docRef = db.collection("players").document(username)
@@ -82,9 +56,6 @@ struct DashBoardPage: View {
                     defaults.set(true, forKey: "isNotifTokenRegisteredBefore")
                 }
                 #endif
-                DispatchQueue.main.async {
-                    fetchUserData()
-                }
                 Auth.auth().addStateDidChangeListener { auth, user in
                     if user != nil {
                         isUserLoggedIn = true

@@ -135,6 +135,16 @@ class Player: Codable, ObservableObject{
         updateUserProfile()
     }
     
+    func updateInfoAndStats(updatedPlayer: Player) {
+        correctAnswerCount = updatedPlayer.correctAnswerCount
+        passCount = updatedPlayer.passCount
+        wrongAnswerCount = updatedPlayer.wrongAnswerCount
+        point = updatedPlayer.point
+        incomingFriendRequests = updatedPlayer.incomingFriendRequests
+        friendList = updatedPlayer.friendList
+        friendList = updatedPlayer.friendList
+    }
+    
     func sendFriendRequestTo(friendUsername: String) {
         if !outgoingFriendRequests.contains(friendUsername) && !friendList.contains(friendUsername) {
             outgoingFriendRequests.append(friendUsername)
