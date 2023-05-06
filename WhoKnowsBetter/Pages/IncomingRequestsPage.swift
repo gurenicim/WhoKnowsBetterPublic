@@ -54,6 +54,7 @@ struct IncomingRequestsPage: View {
         }.scrollContentBackground(.hidden).navigationTitle("Incoming Requests")
             .onAppear {
                 aList = player.incomingFriendRequests
+                player.updateFriendshipFromDatabase()
             }
     }
 }

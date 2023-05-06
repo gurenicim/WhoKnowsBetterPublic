@@ -24,8 +24,7 @@ class Quiz: ObservableObject {
         q2.setSecondAnswer(secondAnswer: qDict["secondAnswer2"] as? String ?? "")
         q2.setCorrectAnswer(correctAnswer: qDict["correctAnswer2"] as? String ?? "")
         q2.setWeight(weight: Int(qDict["weight2"] as! String) ?? 0)
-        questionArray.append(q1)
-        questionArray.append(q2)
+        questionArray = [q1,q2]
     }
     
     func setQuestionArray(newQuestionArray: Array<Question>) {

@@ -15,7 +15,7 @@ struct QuizViewPage: View {
     @State var point: Int = 0
     @Binding var isNewQuizReceived: Bool
     @ObservedObject var player: Player
-    var questionArray: Array<Question>
+    var quiz: Quiz = Quiz.shared
     var edgeTransition: AnyTransition = .move(edge: .bottom)
     var body: some View {
         ZStack {
@@ -25,7 +25,7 @@ struct QuizViewPage: View {
                 VStack {
                     Spacer().frame(height: 42)
                     ScrollView {
-                        ForEach(questionArray) { question in
+                        ForEach(quiz.questionArray) { question in
                             QuestionComponent(question: question, doneCount: $doneCount, correctAnswerCount: $correctAnswerCount, passCount: $passCount, wrongAnswerCount: $wrongAnswerCount, point: $point).padding(16)
                             
                         }
@@ -45,6 +45,7 @@ struct QuizViewPage: View {
                             wrongAnswerCount = 0
                             point = 0
                             player.updateStats()
+                            quiz.removeAll()
                         }, label: {
                             Text("Done").font(.system(.title2)).foregroundColor(.black)
                         }).frame(minWidth: 150).padding(16).background(RoundedRectangle(cornerRadius: 50).fill(Color.green.opacity(0.7))).contentShape(RoundedRectangle(cornerRadius: 50))

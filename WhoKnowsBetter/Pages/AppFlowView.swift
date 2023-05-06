@@ -61,7 +61,7 @@ struct AppFlowView: View {
                         }
                     }
             }
-            QuizViewPage(isNewQuizReceived: $isQuizReceived.isTodaysQuizReceived, player: player, questionArray: quiz.questionArray)
+            QuizViewPage(isNewQuizReceived: $isQuizReceived.isTodaysQuizReceived, player: player)
         }
     }
 }

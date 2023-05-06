@@ -8,15 +8,6 @@
 import Foundation
 import Firebase
 
-extension Encodable {
-    func asDictionary() throws -> [String: Any] {
-        let data = try JSONEncoder().encode(self)
-        guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-            throw NSError()
-        }
-        return dictionary
-    }
-}
 
 class Player: Codable, ObservableObject{
     
@@ -67,6 +58,24 @@ class Player: Codable, ObservableObject{
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(username, forKey: .username)
+    }
+    
+    func asDictionary() throws -> [String: Any] {
+        let dictionary: [String: Any] = [
+            "username": username,
+            "name": name,
+            "surname": surname,
+            "email": email,
+            "passCount": passCount,
+            "point": point,
+            "rank": rank,
+            "correctAnswerCount": correctAnswerCount,
+            "wrongAnswerCount": wrongAnswerCount,
+            "friendList": friendList,
+            "incomingFriendRequests": incomingFriendRequests,
+            "outgoingFriendRequests": outgoingFriendRequests
+        ]
+        return dictionary
     }
     
     init(username: String, name: String, surname: String, email: String, passCount: Int, point: Int, rank: Int, correctAnswerCount: Int, wrongAnswerCount: Int, friendList: Array<String>, incomingFriendRequests: Array<String>, outgoingFriendRequests: Array<String>) {
@@ -123,6 +132,21 @@ class Player: Codable, ObservableObject{
         try? UserDefaults.standard.set(self.asDictionary(), forKey: "userProfile")
     }
     
+    func updateFriendshipFromDatabase() {
+        let db = Firestore.firestore()
+        let currentUser = db.collection("players").document(username)
+        currentUser.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                self.friendList = data?["friendList"] as? Array<String> ?? Array<String>()
+                self.outgoingFriendRequests = data?["outgoingFriendRequests"] as? Array<String> ?? Array<String>()
+                self.incomingFriendRequests = data?["incomingFriendRequests"] as? Array<String> ?? Array<String>()
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
     func updateStats() {
         let db = Firestore.firestore()
         let currentUser = db.collection("players").document(username)
@@ -141,7 +165,7 @@ class Player: Codable, ObservableObject{
         wrongAnswerCount = updatedPlayer.wrongAnswerCount
         point = updatedPlayer.point
         incomingFriendRequests = updatedPlayer.incomingFriendRequests
-        friendList = updatedPlayer.friendList
+        outgoingFriendRequests = updatedPlayer.outgoingFriendRequests
         friendList = updatedPlayer.friendList
     }
     

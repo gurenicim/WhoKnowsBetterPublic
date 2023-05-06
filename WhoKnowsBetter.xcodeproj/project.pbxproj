@@ -30,8 +30,10 @@
 		CE23452D29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452C29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift */; };
 		CE23452F29FBF551009CEFA3 /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23452E29FBF551009CEFA3 /* AppFlowView.swift */; };
 		CE23453329FC06A5009CEFA3 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23453229FC06A5009CEFA3 /* Quiz.swift */; };
+		CE296AF22A019D630001DD3B /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE296AF12A019D630001DD3B /* FirebaseCrashlytics */; };
 		CE2AA66329B8CE8200815793 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A630829B1FED40098CD5C /* SignUpPage.swift */; };
 		CE2AA66529B8D0EA00815793 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2AA66429B8D0EA00815793 /* Player.swift */; };
+		CE400BB829FD3D9500C762FB /* PushNotifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE400BB729FD3D9500C762FB /* PushNotifModel.swift */; };
 		CE43934129EF45E5009DAF8F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CE43934029EF45E5009DAF8F /* FirebaseMessaging */; };
 		CE43934629F01984009DAF8F /* IncomingRequestsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43934529F01984009DAF8F /* IncomingRequestsPage.swift */; };
 		CE43934A29F52897009DAF8F /* FriendListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE43934929F52897009DAF8F /* FriendListPage.swift */; };
@@ -91,6 +93,7 @@
 		CE23452E29FBF551009CEFA3 /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
 		CE23453229FC06A5009CEFA3 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		CE2AA66429B8D0EA00815793 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CE400BB729FD3D9500C762FB /* PushNotifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifModel.swift; sourceTree = "<group>"; };
 		CE43933F29EEFCFB009DAF8F /* WhoKnowsBetter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhoKnowsBetter.entitlements; sourceTree = "<group>"; };
 		CE43934229EF4B26009DAF8F /* WhoKnowsBetterRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = WhoKnowsBetterRelease.entitlements; sourceTree = "<group>"; };
 		CE43934529F01984009DAF8F /* IncomingRequestsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingRequestsPage.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 			files = (
 				CE6A630029B12C600098CD5C /* FirebaseDatabaseSwift in Frameworks */,
 				CE43934129EF45E5009DAF8F /* FirebaseMessaging in Frameworks */,
+				CE296AF22A019D630001DD3B /* FirebaseCrashlytics in Frameworks */,
 				CE6A62FE29B12C600098CD5C /* FirebaseAuth in Frameworks */,
 				CE6A630329B13B7F0098CD5C /* FirebaseFirestore in Frameworks */,
 			);
@@ -234,6 +238,7 @@
 				CE23452629F6A27B009CEFA3 /* Question.swift */,
 				CE23452C29FBBA94009CEFA3 /* QuizBooleanDelegateSwitch.swift */,
 				CE23453229FC06A5009CEFA3 /* Quiz.swift */,
+				CE400BB729FD3D9500C762FB /* PushNotifModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				CE0281AD29AFCCC900F54757 /* Sources */,
 				CE0281AE29AFCCC900F54757 /* Frameworks */,
 				CE0281AF29AFCCC900F54757 /* Resources */,
+				CE296AF32A019E750001DD3B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,6 +272,7 @@
 				CE6A62FF29B12C600098CD5C /* FirebaseDatabaseSwift */,
 				CE6A630229B13B7F0098CD5C /* FirebaseFirestore */,
 				CE43934029EF45E5009DAF8F /* FirebaseMessaging */,
+				CE296AF12A019D630001DD3B /* FirebaseCrashlytics */,
 			);
 			productName = WhoKnowsBetter;
 			productReference = CE0281B129AFCCC900F54757 /* WhoKnowsBetter.app */;
@@ -382,6 +389,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CE296AF32A019E750001DD3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE0281AD29AFCCC900F54757 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -403,6 +432,7 @@
 				CE1718EA29E6897E001AAEC1 /* FriendshipPage.swift in Sources */,
 				CE23452729F6A27B009CEFA3 /* Question.swift in Sources */,
 				CE1718E629E68660001AAEC1 /* SideMenuView.swift in Sources */,
+				CE400BB829FD3D9500C762FB /* PushNotifModel.swift in Sources */,
 				CE23452929F6C0EB009CEFA3 /* QuizViewPage.swift in Sources */,
 				CE23452F29FBF551009CEFA3 /* AppFlowView.swift in Sources */,
 				CE23452529F69DC1009CEFA3 /* QuestionComponent.swift in Sources */,
@@ -570,6 +600,7 @@
 				CODE_SIGN_ENTITLEMENTS = WhoKnowsBetter/WhoKnowsBetter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"WhoKnowsBetter/Preview Content\"";
 				DEVELOPMENT_TEAM = Q55FUPDXJ2;
 				ENABLE_PREVIEWS = YES;
@@ -600,6 +631,7 @@
 				CODE_SIGN_ENTITLEMENTS = WhoKnowsBetter/WhoKnowsBetterRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"WhoKnowsBetter/Preview Content\"";
 				DEVELOPMENT_TEAM = Q55FUPDXJ2;
 				ENABLE_PREVIEWS = YES;
@@ -750,6 +782,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE296AF12A019D630001DD3B /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		CE43934029EF45E5009DAF8F /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE6A62FC29B12C600098CD5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

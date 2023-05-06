@@ -71,7 +71,7 @@ struct ContentView : View {
                     tabBar.hidden()
                 }
             }
-        } else if UserDefaults.standard.string(forKey: "username") != nil {
+        } else {
             AppFlowView()
         }
     }

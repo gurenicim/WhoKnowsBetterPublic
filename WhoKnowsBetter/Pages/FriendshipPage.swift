@@ -13,6 +13,7 @@ struct FriendshipPage: View {
     @Binding var userList: Array<String>
     @Binding var presentSideMenu: Bool
     @ObservedObject var player: Player
+    @ObservedObject var pushNotifModel: PushNotifModel = PushNotifModel.shared
     @Binding var isUserLoggedIn: Bool
     @FocusState var isFocused: Bool
     @State var buttonText: String = "Add"
@@ -154,9 +155,9 @@ struct FriendshipPage: View {
                     isUserLoggedIn = false
                 }
             }
-        }.navigationBarBackButtonHidden().padding(24).refreshable {
-            fetchUserData()
-        }
-        
+        }.navigationBarBackButtonHidden().padding(24)
+            .onReceive(pushNotifModel.$isFriendRequest) { isFriendRequest in
+                player.updateFriendshipFromDatabase()
+            }
     }
 }

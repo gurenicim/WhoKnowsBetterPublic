@@ -46,6 +46,7 @@ struct FriendListPage: View {
         }.scrollContentBackground(.hidden).navigationTitle("Your Friends")
             .onAppear {
                 aList = player.friendList
+                player.updateFriendshipFromDatabase()
             }
     }
 }

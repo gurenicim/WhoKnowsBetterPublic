@@ -15,6 +15,7 @@ import FirebaseMessaging
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     @ObservedObject var isQuizReceived: QuizBooleanDelegateSwitch = QuizBooleanDelegateSwitch.shared
+    @ObservedObject var pushNotifModel: PushNotifModel = PushNotifModel.shared
     @ObservedObject var quiz: Quiz = Quiz.shared
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -45,6 +46,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler([[.banner, .sound]])
     }
     
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if userInfo["type"] as! String == "QUIZ" {
+            let dict = userInfo as! Dictionary<String,Any>
+            quiz.setQuestionArray(qDict: dict)
+            isQuizReceived.isTodaysQuizReceived = true
+        } else if userInfo["type"] as! String == "FRIENDREQUEST" {
+            pushNotifModel.isFriendRequest = true
+        }
+    }
+    
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse,
@@ -56,8 +67,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if receivedNotif["type"] as! String == "QUIZ" {
             let dict = receivedNotif as! Dictionary<String,Any>
             quiz.setQuestionArray(qDict: dict)
-            defaults.set(true, forKey: "isNewQuizReceived")
             isQuizReceived.isTodaysQuizReceived = true
+            defaults.set(true, forKey: "isNewQuizReceived")
+        } else if receivedNotif["type"] as! String == "FRIENDREQUEST" {
+            pushNotifModel.isFriendRequest = true
         }
         #else
         if let dict = receivedNotif["aps"] as? Dictionary<String,Any> {
@@ -65,6 +78,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 if dict2["type"] as? String == "QUIZ" {
                     defaults.set(true, forKey: "isNewQuizReceived")
                     isQuizReceived.isTodaysQuizReceived = true
+                } else if dict2["type"] as? String == "FRIENDREQUEST" {
+                    pushNotifModel.isFriendRequest = true
                 }
             }
         }
